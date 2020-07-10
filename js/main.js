@@ -1,10 +1,10 @@
 
 //Elements 
 const errorElement = document.querySelector(".error p");
-const iconElement = document.querySelector(".icon");
-const tempElement = document.querySelector(".temp p");
-const descriptionElement = document.querySelector(".description p");
-const verdictElement = document.querySelector(".verdict h3");
+const iconElement = document.getElementById("icon");
+const tempElement = document.getElementById("temp");
+const descriptionElement = document.getElementById("description");
+const verdictElement = document.getElementById("verdict");
 const titleElement = document.querySelector(".title h1");
 
 const KELVIN = 273.15;
@@ -38,7 +38,7 @@ function showError(error){
     errorElement.innerHTML = `<p> ${error.message} </p>`;
 }
 function displayWeather(){
-    iconElement.innerHTML = `<img src="img/${weather.iconId}.png"/>`;
+    iconElement.src = `img/${weather.iconId}.png`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>F</span>`;
     descriptionElement.innerHTML = weather.description;
 
@@ -67,6 +67,9 @@ function getWeather(latitude, longitude){
         .then(function(){
             displayWeather();
         });
+}
+function isRaining(){
+    pass;
 }
 
 function getVerdict(temp){
