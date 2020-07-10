@@ -1,0 +1,21 @@
+/*
+Blue: 264653
+Green: #2a9d8f
+Yellow: #e9c46a
+
+
+*/
+
+
+#bigbox{
+    height: 100vh;
+    background-color: #264653;
+}
+
+.title h1{
+    color: #e9c46a;
+}
+
+.card{
+    border: 2px solid #2a9d8f;
+}
